@@ -48,8 +48,6 @@ body {
   box-shadow: 0 9px #999;
   margin: 5%;
   transition: 0.1s ease-in;
-  -moz-transition: -moz-transition 0.1s ease-in;
-  -webkit-transition: -webkit-transition 0.1s ease-in;
 }
 
 .btn_primary:hover {
@@ -59,8 +57,6 @@ body {
 .btn_primary:active {
   background-color: #fff27f;
   box-shadow: 0 5px #666;
-  -moz-transition: -moz-transform, translateY(4px);
-  -webkit-transition: -webkit-transform, translateY(4px);
   transform: translateY(4px);
 }
 
