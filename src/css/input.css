@@ -4,15 +4,23 @@
 }
 
 body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFCF6C), to(#906733));
+  background: -o-linear-gradient(top, #FFCF6C 0%, #906733 100%);
   background: linear-gradient(180deg, #FFCF6C 0%, #906733 100%);
   font-family: "Courier New", Courier, monospace;
   font-weight: 300;
 }
 
 .container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 95%;
 }
@@ -24,12 +32,14 @@ body {
 .hex-colors h1 {
   font-size: 2rem;
   text-transform: uppercase;
+  -webkit-animation: changeColor 5s infinite alternate;
   animation: changeColor 5s infinite alternate;
 }
 
 .hex-colors h2 {
   font-size: 2rem;
   margin-top: 5%;
+  -webkit-animation: changeColor 5s infinite alternate;
   animation: changeColor 5s infinite alternate;
 }
 
@@ -45,8 +55,11 @@ body {
   background-color: orange;
   border: none;
   border-radius: 15px;
+  -webkit-box-shadow: 0 9px #999;
   box-shadow: 0 9px #999;
   margin: 5%;
+  -webkit-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 
@@ -56,10 +69,33 @@ body {
 
 .btn_primary:active {
   background-color: #fff27f;
+  -webkit-box-shadow: 0 5px #666;
   box-shadow: 0 5px #666;
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
   transform: translateY(4px);
 }
 
+@-webkit-keyframes changeColor {
+  0% {
+    color: indigo;
+  }
+  20% {
+    color: rgb(157, 157, 250);
+  }
+  40% {
+    color: rgb(132, 245, 132);
+  }
+  60% {
+    color: rgb(255, 255, 147);
+  }
+  80% {
+    color: rgb(255, 221, 157);
+  }
+  100% {
+    color: rgb(255, 172, 172);
+  }
+}
 @keyframes changeColor {
   0% {
     color: indigo;
